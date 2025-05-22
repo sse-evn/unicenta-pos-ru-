@@ -79,9 +79,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </properties>
 
     <organization>
-        <name>Paulo Borges</name> <!-- To be Chnge for a Organization Name -->
+        <name>Hinode</name> <!-- To be Chnge for a Organization Name -->
     </organization>
-    <inceptionYear>2022</inceptionYear>
+    <inceptionYear>2025</inceptionYear>
 
     <scm>
         <connection>scm:git:https://github.com/poolborges/unicenta-pos.git</connection>
@@ -153,6 +153,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <module>kriolos-opos-domain</module>
         <module>kriolos-opos-i18n</module>
         <module>kriolos-opos-i18n_pt</module>
+	<module>kriolos-opos-i18n_ru</module>
         <module>kriolos-opos-app</module>
         <module>docs</module>
     </modules>
@@ -189,7 +190,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 <artifactId>kriolos-opos-i18n_pt</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+	   <dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>kriolos-opos-i18n_ru</artifactId>
+	    </dependency>
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-stdlib</artifactId>

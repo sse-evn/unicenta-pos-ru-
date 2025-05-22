@@ -1,18 +1,18 @@
-//    KriolOS POS
-//    Copyright (c) 2019-2023 KriolOS
+// KriolOS POS
+// Copyright (c) 2019-2023 KriolOS
 //
-//    This program is free software: you can redistribute it and/or modify
-//    it under the terms of the GNU General Public License as published by
-//    the Free Software Foundation, either version 3 of the License, or
-//    (at your option) any later version.
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
 //
-//    This program is distributed in the hope that it will be useful,
-//    but WITHOUT ANY WARRANTY; without even the implied warranty of
-//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//    GNU General Public License for more details.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
 //
-//    You should have received a copy of the GNU General Public License
-//    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <http://www.gnu.org/licenses/>.
 package com.openbravo.pos.config;
 
 import com.openbravo.data.user.DirtyManager;
@@ -58,8 +58,8 @@ public class JPanelConfigLocale extends javax.swing.JPanel implements PanelConfi
 
         List<Locale> availablelocales = new ArrayList<>();
         availablelocales.addAll(Arrays.asList(Locale.getAvailableLocales())); // Available java locales
-//        addLocale(availablelocales, new Locale("en", "GB", "")); // English GB
-//        addLocale(availablelocales, new Locale("en", "US", "")); // English USA
+        // Добавляем русскую локаль
+        addLocale(availablelocales, new Locale("ru", "RU", "")); // Russian Federation
 
         Collections.sort(availablelocales, new LocaleComparator());
 
@@ -92,7 +92,7 @@ public class JPanelConfigLocale extends javax.swing.JPanel implements PanelConfi
         jcboDatetime.addItem(DEFAULT_VALUE);
 
         setupListerner();
-        
+
         System.out.println("Verificar (120 CVE) pt-CV Currency: 120.30 "
                 + NumberFormat.getCurrencyInstance(new Locale("pt", "CV")).format(120.30)
                 + "\n\rVerificar (120 Kuanza) pt-AO Currency: 120.30 "
@@ -193,8 +193,6 @@ public class JPanelConfigLocale extends javax.swing.JPanel implements PanelConfi
         jcboDate.setToolTipText("<html>Date formated: " + Formats.DATE.formatValue(new Date()));
         jcboTime.setToolTipText("<html>Time formated: " + Formats.TIME.formatValue(new Date()));
         jcboDatetime.setToolTipText("<html>DateTime formated: " + Formats.TIMESTAMP.formatValue(new Date()));
-
-        
 
     }
 
@@ -300,7 +298,7 @@ public class JPanelConfigLocale extends javax.swing.JPanel implements PanelConfi
 
         jPanel1.setMaximumSize(new java.awt.Dimension(600, 400));
         jPanel1.setOpaque(false);
-        jPanel1.setPreferredSize(new java.awt.Dimension(400, 300));
+        setPreferredSize(new java.awt.Dimension(400, 300));
 
         lblLocale.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblLocale.setText(AppLocal.getIntString("label.locale")); // NOI18N
