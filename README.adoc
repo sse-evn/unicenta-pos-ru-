@@ -78,6 +78,7 @@ image::krpos-screenshot.gif[]
 * @author JA
 * @author poolborges
 * @author Teodor Danciu (teodord@users.sourceforge.net)
+* @author evn
 
 
 == Run App From source
